@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza constructor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css'
+        integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=='
+        crossorigin='anonymous' />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'
+        integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=='
+        crossorigin='anonymous'></script>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="priseContainer">Сума:<span class="prise"></span>Грн</div>
+        <div class="pizzaContainer">
+            <img src="./img/basa.avif" alt="" class="basePizza">
+        </div>
+        <div class="menuContainer">
+            <h1>Твоя піца</h1>
+            <p class="boldTxt">Інгредієнти вашої піци:</p>
+            <div class="pizzaSizeContainer">
+                <p class="txtColor">Розмір</p>
+                <div class="sizePizzaBox">
+                    <div class="sizePizzaItem standard">
+                        <p>Стандартна</p>
+                    </div>
+                    <div class="sizePizzaItem large">
+                        <p>Велика</p>
+                    </div>
+                    <div class="sizePizzaItem extralarge">
+                        <p>Екстравелика</p>
+                    </div>
+                    <div class="sizePizzaItem thelargest">
+                        <p>Найбільша</p>
+                    </div>
+                </div>
+            </div>
+            <div class="doughContainer">
+                <div class="dough">
+                    <p class="txtColor">Тісто</p>
+                    <div class="doughBox">
+                        <div class="doughItem loose">Пухке</div>
+                        <div class="doughItem thin">Тонке</div>
+                    </div>
+                </div>
+                <div class="pizzaBoardContainer">
+                    <p class="txtColor">Борт</p>
+                    <div class="boardBox">
+                        <div class="boardItem philadelphia">Філадельфія</div>
+                        <div class="boardItem hotDog">Hot-Dog</div>
+                    </div>
+                </div>
+            </div>
+            <div class="filterIngredientsContainer">
+                <div class="filterItem allItem">Всі</div>
+                <div class="filterItem saucesItems">Соуси</div>
+                <div class="filterItem meatItems">М'ясо</div>
+                <div class="filterItem cheeseItems">Сир</div>
+                <div class="filterItem vegetablesItems">Овочі</div>
+            </div>
+            <div class="ingredientsContainer">
+                <div class="saucesBox">
+                    <p class="boldTxt2">Соуси</p>
+                    <div class="saucesItemBox">
+                        <div class="saucesItem chesnochnyi">
+                            <img src="./img/chesnochnyi.avif" alt="">
+                            <p>Соус Часниковий</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowchesnochnyiPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientchesnochnyi">0</p>
+                                <div class="arrowchesnochnyiMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="saucesItem alfredo">
+                            <img src="./img/alfredo.avif" alt="">
+                            <p>Соус Альфредо</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowalfredoPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientalfredo">0</p>
+                                <div class="arrowalfredoMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="saucesItem sousdomynos">
+                            <img src="./img/sous-domynos.avif" alt="">
+                            <p>Соус Domino's</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowsousdomynosPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientsousdomynos">0</p>
+                                <div class="arrowsousdomynosMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="saucesItem sousbbk">
+                            <img src="./img/sous-bbk.avif" alt="">
+                            <p>Соус Барбекю</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowsousbbkPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientsousbbk">0</p>
+                                <div class="arrowsousbbkMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meatBox">
+                    <p class="boldTxt2">М'ясо</p>
+                    <div class="meatItemBox">
+                        <div class="meatItem tyrkey">
+                            <img src="./img/tyrkey.avif" alt="">
+                            <p>Індичка</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowtyrkeyPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredienttyrkey">0</p>
+                                <div class="arrowtyrkeyMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem chorizo">
+                            <img src="./img/chorizo.avif" alt="">
+                            <p>Чорізо</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowchorizoPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientchorizo">0</p>
+                                <div class="arrowchorizoMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem ohotnichikolbaski">
+                            <img src="./img/ohotnichi-kolbaski-1.avif" alt="">
+                            <p>Ковбаски баварські</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowohotnichikolbaskiPlus arrowPlus"><i class="fa-solid fa-plus"></i>
+                                </div>
+                                <p class="amountIngredientohotnichikolbaski">0</p>
+                                <div class="arrowohotnichikolbaskiMinus arrowMinus"><i class="fa-solid fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meatItem kolbasky">
+                            <img src="./img/kolbasky.avif" alt="">
+                            <p>Фрикадельки</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowkolbaskyPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientkolbasky">0</p>
+                                <div class="arrowkolbaskyMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem bifteliatyna">
+                            <img src="./img/bif-teliatyna.avif" alt="">
+                            <p>Телятина</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowbifteliatynaPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientbifteliatyna">0</p>
+                                <div class="arrowbifteliatynaMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem largevetchinanarez">
+                            <img src="./img/large-vetchina-narez.avif" alt="">
+                            <p>Шинка</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowlargevetchinanarezPlus arrowPlus"><i class="fa-solid fa-plus"></i>
+                                </div>
+                                <p class="amountIngredientlargevetchinanarez">0</p>
+                                <div class="arrowlargevetchinanarezMinus arrowMinus"><i class="fa-solid fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meatItem zavantazhennia">
+                            <img src="./img/zavantazhennia.avif" alt="">
+                            <p>Бекон</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowzavantazhenniaPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientzavantazhennia">0</p>
+                                <div class="arrowzavantazhenniaMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem tunets">
+                            <img src="./img/tunets.avif" alt="">
+                            <p>Тунець</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowtunetsPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredienttunets">0</p>
+                                <div class="arrowtunetsMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem kolbaskimyunhenskie">
+                            <img src="./img/45-87-img-2732-kolbaski-myunhenskie-726x340.avif" alt="">
+                            <p>Сосиски білі</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowkolbaskimyunhenskiePlus arrowPlus"><i class="fa-solid fa-plus"></i>
+                                </div>
+                                <p class="amountIngredientkolbaskimyunhenskie">0</p>
+                                <div class="arrowkolbaskimyunhenskieMinus arrowMinus"><i class="fa-solid fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meatItem pepp">
+                            <img src="./img/pepp-302x302.avif" alt="">
+                            <p>Пепероні</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowpeppPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientpepp">0</p>
+                                <div class="arrowpeppMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="meatItem tirasdepollo">
+                            <img src="./img/tiras-de-pollo.avif" alt="">
+                            <p>Курка</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowtirasdepolloPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredienttirasdepollo">0</p>
+                                <div class="arrowtirasdepolloMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cheeseBox">
+                    <p class="boldTxt2">Сир</p>
+                    <div class="cheeseItemBox">
+                        <div class="cheeseItem chedder">
+                            <img src="./img/syr-chedder.avif" alt="">
+                            <p>Чеддер</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowchedderPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientchedder">0</p>
+                                <div class="arrowchedderMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="cheeseItem mozzarella">
+                            <img src="./img/mozzarella.avif" alt="">
+                            <p>Моцарела</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowmozzarellaPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientmozzarella">0</p>
+                                <div class="arrowmozzarellaMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="cheeseItem dorblu">
+                            <img src="./img/82857739-2222299-dor-blu4.avif" alt="">
+                            <p>Бергадер Блю</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowdorbluPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientdorblu">0</p>
+                                <div class="arrowdorbluMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="cheeseItem parmezan">
+                            <img src="./img/parmezan.avif" alt="">
+                            <p>Пармезан</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowparmezanPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientparmezan">0</p>
+                                <div class="arrowparmezanMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="cheeseItem feta">
+                            <img src="./img/feta.avif" alt="">
+                            <p>Фета</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowfetaPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientfeta">0</p>
+                                <div class="arrowfetaMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vegetablesBox">
+                    <p class="boldTxt2">Овочі</p>
+                    <div class="vegetablesItemBox">
+                        <div class="vegetablesItem cherrytomatoes">
+                            <img src="./img/cherry-tomatoes.avif" alt="">
+                            <p>Помідори чері</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowcherrytomatoesPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientcherrytomatoes">0</p>
+                                <div class="arrowcherrytomatoesMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem shpinat">
+                            <img src="./img/shpinat350.avif" alt="">
+                            <p>Шпинат</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowshpinatPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientshpinat">0</p>
+                                <div class="arrowshpinatMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem khalapeno"><img src="./img/khalapeno.avif" alt="">
+                            <p>Халапеньйо</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowkhalapenoPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientkhalapeno">0</p>
+                                <div class="arrowkhalapenoMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem tomato">
+                            <img src="./img/tomato-png12549.avif" alt="">
+                            <p>Помідори</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowtomatoPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredienttomato">0</p>
+                                <div class="arrowtomatoMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem horchytsa">
+                            <img src="./img/horchytsa.avif" alt="">
+                            <p>Гірчиця</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowhorchytsaPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredienthorchytsa">0</p>
+                                <div class="arrowhorchytsaMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem olyvky">
+                            <img src="./img/olyvky.avif" alt="">
+                            <p>Оливки</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowolyvkyPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientolyvky">0</p>
+                                <div class="arrowolyvkyMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem pear">
+                            <img src="./img/pear.avif" alt="">
+                            <p>Груша</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowpearPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientpear">0</p>
+                                <div class="arrowpearMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem marinovannyeogurcy">
+                            <img src="./img/marinovannye-ogurcy.avif" alt="">
+                            <p>Огірки мариновані</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowmarinovannyeogurcyPlus arrowPlus"><i class="fa-solid fa-plus"></i>
+                                </div>
+                                <p class="amountIngredientmarinovannyeogurcy">0</p>
+                                <div class="arrowmarinovannyeogurcyMinus arrowMinus"><i class="fa-solid fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem perets">
+                            <img src="./img/perets.avif" alt="">
+                            <p>Болгарський перець</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowperetsPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientperets">0</p>
+                                <div class="arrowperetsMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem ananasa">
+                            <img src="./img/polza-i-vred-ananasa-7.avif" alt="">
+                            <p>Ананас</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowananasaPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientananasa">0</p>
+                                <div class="arrowananasaMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem shampinony">
+                            <img src="./img/shampinony.avif" alt="">
+                            <p>Гриби</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowshampinonyPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientshampinony">0</p>
+                                <div class="arrowshampinonyMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem luk">
+                            <img src="./img/luk.avif" alt="">
+                            <p>Цибуля</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowlukPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientluk">0</p>
+                                <div class="arrowlukMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem kukurudzu">
+                            <img src="./img/yak-pravilno-zvariti-kukurudzu-v-kachanah-shvidko-smachno-prigotuvannya-z-vdeo-894.avif"
+                                alt="">
+                            <p>Кукурудза</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowkukurudzuPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientkukurudzu">0</p>
+                                <div class="arrowkukurudzuMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                        <div class="vegetablesItem crispy">
+                            <img src="./img/crispy.avif" alt="">
+                            <p>Кріспі цибулька</p>
+                            <div class="amountIngredientBox">
+                                <div class="arrowcrispyPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                                <p class="amountIngredientcrispy">0</p>
+                                <div class="arrowcrispyMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="appsBox">
+                    <p class="boldTxt2">Додатки</p>
+                    <div class="appsItem sousbbktop">
+                        <img src="./img/sous-bbk.avif" alt="">
+                        <p>Соус Барбекю (зверху)</p>
+                        <div class="amountIngredientBox">
+                            <div class="arrowsousbbktopPlus arrowPlus"><i class="fa-solid fa-plus"></i></div>
+                            <p class="amountIngredientsousbbktop">0</p>
+                            <div class="arrowsousbbktopMinus arrowMinus"><i class="fa-solid fa-minus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnContainer">
+                <button class="resetBtn">Очистити</button>
+                <button class="payBtn">Сплатити</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
