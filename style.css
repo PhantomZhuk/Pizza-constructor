@@ -12,6 +12,40 @@
     padding-bottom: 50px;
 }
 
+.popupContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 11px 31px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.btnclose {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fe0021;
+    border-radius: 5px;
+    color: #fff;
+}
+
 .pizzaContainer {
     width: 50%;
     height: 100vh;
@@ -19,6 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
 }
 
 .menuContainer {

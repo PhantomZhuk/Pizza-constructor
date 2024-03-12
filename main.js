@@ -1,6 +1,11 @@
+$(`.popupContainer`).hide();
 $(`.standard`).addClass('chosenSizePizzaItem');
 $(`.loose`).addClass('chosenSizePizzaItem');
 $(`.allItem`).addClass('chosenFilterItem');
+
+$(`.btnclose`).click(function(){
+    $(`.popupContainer`).hide();
+});
 
 let priseProduct = 210;
 
@@ -326,7 +331,7 @@ $(`.arrowchesnochnyiPlus`).click(function () {
             }
         }
     } else {
-
+        $(`.popupContainer`).show();
     }
 
 });
@@ -350,7 +355,7 @@ $(`.arrowalfredoPlus`).click(function () {
             }
         }
     } else {
-
+        $(`.popupContainer`).show();
     }
 
 });
@@ -374,7 +379,7 @@ $(`.arrowsousdomynosPlus`).click(function () {
             }
         }
     } else {
-
+        $(`.popupContainer`).show();
     }
 
 });
@@ -398,7 +403,7 @@ $(`.arrowsousbbkPlus`).click(function () {
             }
         }
     } else {
-
+        $(`.popupContainer`).show();
     }
 
 });
@@ -421,7 +426,7 @@ $(`.arrowtyrkeyPlus`).click(function () {
             $(`.amountIngredienttyrkey`).text(numbertyrkey);
         }
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -444,7 +449,7 @@ $(`.arrowchorizoPlus`).click(function () {
             $(`.amountIngredientchorizo`).text(numberchorizo);
         }
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -468,7 +473,7 @@ $(`.arrowohotnichikolbaskiPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -492,7 +497,7 @@ $(`.arrowkolbaskyPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -516,7 +521,7 @@ $(`.arrowbifteliatynaPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -540,7 +545,7 @@ $(`.arrowlargevetchinanarezPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -564,7 +569,7 @@ $(`.arrowzavantazhenniaPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -588,7 +593,7 @@ $(`.arrowtunetsPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -612,7 +617,7 @@ $(`.arrowkolbaskimyunhenskiePlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -636,7 +641,7 @@ $(`.arrowpeppPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -660,7 +665,7 @@ $(`.arrowtirasdepolloPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -684,7 +689,7 @@ $(`.arrowchedderPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -708,7 +713,7 @@ $(`.arrowmozzarellaPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -732,7 +737,7 @@ $(`.arrowdorbluPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -757,7 +762,7 @@ $(`.arrowparmezanPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -783,7 +788,7 @@ $(`.arrowfetaPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -807,7 +812,7 @@ $(`.arrowcherrytomatoesPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -831,7 +836,7 @@ $(`.arrowshpinatPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -855,7 +860,7 @@ $(`.arrowkhalapenoPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -879,7 +884,7 @@ $(`.arrowtomatoPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -903,7 +908,7 @@ $(`.arrowhorchytsaPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -927,7 +932,7 @@ $(`.arrowolyvkyPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -951,7 +956,7 @@ $(`.arrowpearPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -975,7 +980,7 @@ $(`.arrowmarinovannyeogurcyPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -999,7 +1004,7 @@ $(`.arrowperetsPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -1023,7 +1028,7 @@ $(`.arrowananasaPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -1047,7 +1052,7 @@ $(`.arrowshampinonyPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -1071,7 +1076,7 @@ $(`.arrowlukPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -1095,7 +1100,7 @@ $(`.arrowkukurudzuPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -1119,7 +1124,7 @@ $(`.arrowcrispyPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
@@ -1143,7 +1148,7 @@ $(`.arrowsousbbktopPlus`).click(function () {
         }
 
     } else {
-
+        $(`.popupContainer`).show();
     }
 });
 
